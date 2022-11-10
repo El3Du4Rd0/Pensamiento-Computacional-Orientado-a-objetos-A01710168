@@ -1,0 +1,15 @@
+Thumbs.db
+ehthumbs.db
+ehthumbs_vista.db
+*.so
+*.out
+*.o
+*.exe
+*.dll
+*.class
+*.com
+*.cab
+*.msi
+*.msm
+*.msp
+*.lnk
