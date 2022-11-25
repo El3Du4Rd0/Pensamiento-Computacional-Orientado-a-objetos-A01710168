@@ -3,51 +3,42 @@
 * Proyecto: Hospital funcional
 * Nombre: Juan Eduardo Rosas Ceron 
 * Matricula: A01710168
-* Fecha: 11/11/2022
-* Metodos: setters(), getters()
+* Fecha: 24/11/2022
 ============================================================================================
 */
 
-//Bibliotecas y clases
 #include <iostream>
 #include <string>
-#include "Doctores.h"
-#include "Pacientes.h"
-#include "Enfermeras.h"
+#include "Enfermera.h"
+#include "Domestico.h"
+#include "Doctor.h"
 
 using namespace std;
 
-//funcion imprime un menu
-void menu(){
-    cout << "Selecciona una opcion:" << endl;
-    cout << "1. Doctor" << endl;
-    cout << "2. Paciente" << endl;
-    cout << "3. Enfermera" << endl;
-}
+int main() {
 
-int main(){
-    //introduccion
-    cout << "Este programa sirve para generar objetos sobre las" << endl;
-    cout << "distintas personas que conforman un hospital" << endl;
+  Enfermera enfermera_1(3, "Maria", "29736459", 42, "2");
+  Domestico domestico_1(4, "Luis", "55667788", 57, "1");
+  Doctor doctor_1(9, "Jorge", "33333333", 32, "0");
 
-    //Ejemplos de objetos
-    cout << "Ejemplos:" << endl;
-
-    Doctores doctor_1("Pablo", 35, 2, "General");
-    cout << doctor_1.get_nombre() << endl;
-    cout << doctor_1.get_edad() << endl;
-    cout << doctor_1.get_consultorio() << endl;
-    cout << doctor_1.get_especialidad() << endl;
-
-    Pacientes paciente_1("Juan", 12, "Covid-19");
-    cout << paciente_1.get_nombre() << endl;
-    cout << paciente_1.get_edad() << endl;
-    cout << paciente_1.get_padecimiento() << endl;
-
-    Enfermeras enfermera_1("Maria", 41, "Urgencias");
-    cout << enfermera_1.get_nombre() << endl;
-    cout << enfermera_1.get_edad() << endl;
-    cout << enfermera_1.get_area() << endl;
-
-    return 0;
-}
+  cout << endl;
+  cout << enfermera_1.get_pacientes_cuidados() << endl;
+  cout << enfermera_1.get_nombre() << endl;
+  cout << enfermera_1.get_ficha() << endl;
+  cout << enfermera_1.get_edad() << endl;
+  cout << enfermera_1.get_jornada() << endl;
+  cout << endl;
+  cout << domestico_1.get_banios_lavados() << endl;
+  cout << domestico_1.get_nombre() << endl;
+  cout << domestico_1.get_ficha() << endl;
+  cout << domestico_1.get_edad() << endl;
+  cout << domestico_1.get_jornada() << endl;
+  cout << endl;
+  cout << doctor_1.get_pacientes_atendidos() << endl;
+  cout << doctor_1.get_nombre() << endl;
+  cout << doctor_1.get_ficha() << endl;
+  cout << doctor_1.get_edad() << endl;
+  cout << doctor_1.get_jornada() << endl;
+  
+  return 0;
+ }
