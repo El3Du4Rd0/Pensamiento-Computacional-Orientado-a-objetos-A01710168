@@ -14,6 +14,7 @@ Doctores, Enfermeras, Domesticos.
 #ifndef TRABAJADOR_H_
 #define TRABAJADOR_H_
 
+//Bibliotecas y clase padre Trabajador
 #include<iostream>
 #include<string>
 

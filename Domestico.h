@@ -12,6 +12,9 @@ Clase Domestico es una clase hija de la clase Trabajador. Además la clase cuent
 funcion que le permite aumentar la cantidad del registro de baños lavados por el Domestico.
 */
 
+#ifndef DOMESTICO_H_
+#define DOMESTICO_H_
+
 //Bibliotecas y clase padre Trabajador
 #include <string>
 #include "Trabajador.h"
@@ -26,7 +29,9 @@ class Domestico: public Trabajador{
     
     public:
         //Constructor
-        Domestico();
+        Domestico(): Trabajador(){
+            banios_lavados = 0;
+        }
         Domestico(int b_l, string nom, string fic, int eda, string jor): Trabajador(nom, fic, eda, jor){
             banios_lavados = b_l;
         }
@@ -57,3 +62,5 @@ void Domestico::set_banios_lavados(int b_l){
 void Domestico::lavar_banios(int num_banios){
     banios_lavados = banios_lavados + num_banios;
 }
+
+#endif
